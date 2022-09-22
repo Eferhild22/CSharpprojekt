@@ -17,6 +17,6 @@ public class UnitPlayer : MonoBehaviour
     }
     public void MoveToPosition(int x, int y)
     {
-        transform.position = new Vector3(x, y, 0);
+        transform.position = new Vector3(-x, y, -0.5f);
     }
 }

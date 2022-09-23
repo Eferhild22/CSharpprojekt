@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 4bb23db67add7d74881f412a0e59b8b2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - projectileBody: {instanceID: 0}
+  - damageIndicatorPrefab: {fileID: 5265094243171516916, guid: 06647e2a868d06346aa9a71c33be8743, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

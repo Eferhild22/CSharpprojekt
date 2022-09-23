@@ -62,5 +62,6 @@ public class TurnManager : MonoBehaviour
         {
             currentPlayerIndex = 1;
         }
+        Debug.Log("The current player is: " + currentPlayerIndex);
     }
 }

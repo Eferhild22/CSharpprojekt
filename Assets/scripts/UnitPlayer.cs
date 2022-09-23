@@ -8,10 +8,10 @@ public class UnitPlayer : MonoBehaviour
     private Vector2Int currentPosition;
 
     private void Start()
-{
+    {
 
-}
-     public Vector2Int GetCurrentPosition()
+    }
+    public Vector2Int GetCurrentPosition()
     {
         return currentPosition;
     }

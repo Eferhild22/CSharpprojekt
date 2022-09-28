@@ -16,7 +16,12 @@ GameObject:
   - component: {fileID: 4154315354213365420}
   - component: {fileID: 6668961158072999549}
   - component: {fileID: 5712359863032491369}
+  - component: {fileID: 3144727171791012022}
+  - component: {fileID: 7944719524095767503}
+  - component: {fileID: 7667018873501738489}
   - component: {fileID: 7459611688258269342}
+  - component: {fileID: 182243286418995001}
+  - component: {fileID: 8816530653651488750}
   m_Layer: 0
   m_Name: test_player
   m_TagString: Untagged
@@ -180,6 +185,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimum: -1
   maximum: 1
+--- !u!114 &3144727171791012022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609497887291146966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feac6d4b14f06db4bbcdd8ee3d08771e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 0}
+  damage: 1
+--- !u!114 &7944719524095767503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609497887291146966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35da05082ce80fd49826af1570566244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 4
+  currentHealth: 0
+  healthBar: {fileID: 0}
+--- !u!114 &7667018873501738489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609497887291146966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8360fd81b98e5824aac50b2796069748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 4
+  deathEffect: {fileID: 0}
 --- !u!114 &7459611688258269342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,3 +243,33 @@ MonoBehaviour:
   playerTurn: {fileID: 0}
   projectilePrefab: {fileID: 0}
   shootingStartPosition: {fileID: 0}
+--- !u!114 &182243286418995001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609497887291146966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1558545d3cbd35449e81be0b7d8d0d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  damage: 1
+  rb: {fileID: 0}
+--- !u!114 &8816530653651488750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609497887291146966}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98663765311fc1f4fb81eeb0bfeec418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTurn: {fileID: 6876629937552387494}
+  projectilePrefab: {fileID: 0}
+  shootingStartPosition: {fileID: 7609497887291146962}

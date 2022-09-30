@@ -11,16 +11,13 @@ GameObject:
   - component: {fileID: 7609497887291146962}
   - component: {fileID: 7609497887291146965}
   - component: {fileID: 7609497887291146967}
+  - component: {fileID: 1919039680900149121}
   - component: {fileID: -5904169510640185160}
   - component: {fileID: 6876629937552387494}
   - component: {fileID: 4154315354213365420}
-  - component: {fileID: 6668961158072999549}
   - component: {fileID: 5712359863032491369}
   - component: {fileID: 3144727171791012022}
   - component: {fileID: 7944719524095767503}
-  - component: {fileID: 7667018873501738489}
-  - component: {fileID: 7459611688258269342}
-  - component: {fileID: 182243286418995001}
   - component: {fileID: 8816530653651488750}
   m_Layer: 0
   m_Name: test_player
@@ -109,6 +106,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1919039680900149121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609497887291146966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8360fd81b98e5824aac50b2796069748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 4
+  deathEffect: {fileID: 0}
 --- !u!95 &-5904169510640185160
 Animator:
   serializedVersion: 4
@@ -141,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45cfc2bfe6cb21d45923b7d43db8b637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTurn: {fileID: 0}
 --- !u!114 &4154315354213365420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,21 +163,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bb23db67add7d74881f412a0e59b8b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  projectileBody: {fileID: 0}
-  damageIndicatorPrefab: {fileID: 5265094243171516916, guid: 06647e2a868d06346aa9a71c33be8743, type: 3}
---- !u!114 &6668961158072999549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7609497887291146966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4a21dcef8dab6b47adbc3364a91eacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
@@ -199,6 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 0}
   damage: 1
+  impactEffect: {fileID: 0}
+  lineRenderer: {fileID: 0}
 --- !u!114 &7944719524095767503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,50 +213,7 @@ MonoBehaviour:
   maxHealth: 4
   currentHealth: 0
   healthBar: {fileID: 0}
---- !u!114 &7667018873501738489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7609497887291146966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8360fd81b98e5824aac50b2796069748, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 4
   deathEffect: {fileID: 0}
---- !u!114 &7459611688258269342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7609497887291146966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f86aa29b19469348840a6752302906f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTurn: {fileID: 0}
-  projectilePrefab: {fileID: 0}
-  shootingStartPosition: {fileID: 0}
---- !u!114 &182243286418995001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7609497887291146966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1558545d3cbd35449e81be0b7d8d0d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 20
-  damage: 1
-  rb: {fileID: 0}
 --- !u!114 &8816530653651488750
 MonoBehaviour:
   m_ObjectHideFlags: 0

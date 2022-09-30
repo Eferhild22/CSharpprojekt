@@ -6,27 +6,38 @@ public class WeaponRaycast : MonoBehaviour
 {
     public Transform firePoint;
     public int damage = 1;
-    public HealthBar healthBar;
-    public PlayerHealth playerHealth;
+    public GameObject impactEffect;
+    public LineRenderer lineRenderer;
     // Update is called once per frame
-    void Update()
+        void Update()
     {
         if(Input.GetKeyDown(KeyCode.V))
         {
-            Shoot();
+            StartCoroutine (Shoot());
         }
     }
-    public void Shoot()
+    IEnumerator Shoot()
     {
-        RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, -firePoint.right);
+        RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, -firePoint.right,2);
        
         if(hitInfo)
         {
             TestEnemy testEnemy = hitInfo.transform.GetComponent<TestEnemy>();
             if(testEnemy != null)
             {
-                testEnemy.TakeDamage(damage);
+                 hitInfo.collider.GetComponent<PlayerHealth>().TakeDamage(damage);
             }
+            Instantiate(impactEffect, hitInfo.point, Quaternion.identity);
+            lineRenderer.SetPosition(0, firePoint.position);
+            lineRenderer.SetPosition(1,hitInfo.point);
         }
+        else
+        {
+            lineRenderer.SetPosition(0, firePoint.position);
+            lineRenderer.SetPosition(1, firePoint.position + -firePoint.right * 1);
+        }
+        lineRenderer.enabled = true;
+        yield return new WaitForSeconds(0.02f);
+        lineRenderer.enabled = false;
     }
 }

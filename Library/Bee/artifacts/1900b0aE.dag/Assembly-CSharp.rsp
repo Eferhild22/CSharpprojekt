@@ -397,6 +397,7 @@
 "Assets/scripts/Weapons/ProjectileEnemy.cs"
 "Assets/scripts/Weapons/TestEnemy.cs"
 "Assets/scripts/Weapons/WeaponRaycast.cs"
+"Assets/scripts/Weapons/WeaponRaycastEnemy.cs"
 "Assets/TextMesh Pro/Examples _ Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples _ Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples _ Extras/Scripts/Benchmark02.cs"

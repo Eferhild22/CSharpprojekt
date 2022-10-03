@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4154315354213365420}
   - component: {fileID: 5712359863032491369}
   - component: {fileID: 3144727171791012022}
+  - component: {fileID: 6032237162242207266}
   - component: {fileID: 7944719524095767503}
   - component: {fileID: 8816530653651488750}
   m_Layer: 0
@@ -153,6 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTurn: {fileID: 0}
+  character1: {fileID: 0}
+  character2: {fileID: 0}
 --- !u!114 &4154315354213365420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,6 +201,24 @@ MonoBehaviour:
   damage: 1
   impactEffect: {fileID: 0}
   lineRenderer: {fileID: 0}
+  playerTurn: {fileID: 0}
+--- !u!114 &6032237162242207266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609497887291146966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04b0db8c612a23342995efd5f04d25c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 0}
+  damage: 1
+  impactEffect: {fileID: 0}
+  lineRenderer: {fileID: 0}
+  playerTurn: {fileID: 0}
 --- !u!114 &7944719524095767503
 MonoBehaviour:
   m_ObjectHideFlags: 0

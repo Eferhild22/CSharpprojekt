@@ -8,12 +8,17 @@ public class WeaponRaycast : MonoBehaviour
     public int damage = 1;
     public GameObject impactEffect;
     public LineRenderer lineRenderer;
+    [SerializeField] private PlayerTurn playerTurn;
     // Update is called once per frame
         void Update()
     {
-        if(Input.GetKeyDown(KeyCode.V))
+        if (playerTurn.IsPlayerTurn())
         {
-            StartCoroutine (Shoot());
+            if (Input.GetKeyDown(KeyCode.V))
+            {
+                StartCoroutine(Shoot());
+            }
+
         }
     }
     IEnumerator Shoot()

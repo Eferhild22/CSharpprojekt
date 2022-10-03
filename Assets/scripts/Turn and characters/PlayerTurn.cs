@@ -6,6 +6,8 @@ public class PlayerTurn : MonoBehaviour
 {
     [SerializeField] private PlayerTurn playerTurn;
     private int playerIndex;
+    public GameObject character1;
+    public GameObject character2;
     public void SetPlayerTurn(int index)
     {
         playerIndex = index;
@@ -23,6 +25,8 @@ public class PlayerTurn : MonoBehaviour
             if (IsPlayerTurn)
             {
                 TurnManager.GetInstance().TriggerChangeTurn();
+                //character1.GetComponent<WeaponRaycast>().enabled = false;
+                //character2.GetComponent<WeaponRaycast>().enabled = true;
 
             }
         }

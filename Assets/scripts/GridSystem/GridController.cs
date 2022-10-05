@@ -8,18 +8,19 @@ public class GridController : MonoBehaviour
 {
     [SerializeField] GameObject gridPrefab;
     [SerializeField] private GridMovement gridMovement;
+    [SerializeField] private GridMovement gridMovement2;
     [SerializeField] private UnitPlayer character1;
     [SerializeField] private UnitPlayer character2;
     [SerializeField] private int number = 20;
     [SerializeField] private PlayerTurn playerTurn;
     [SerializeField] private Vector2Int newStartPosition;
     [SerializeField] private Vector2Int currentSelectionPosition;
-
     //bool hasSelectedPlayer = false;
     bool selectedCharacter1 = false;
     bool selectedCharacter2 = false;
     [SerializeField] private float startingRow;
     [SerializeField] private float startingColumn;
+    //These next serialized fields are for limiting player movement range
 
     private void Start()
     {

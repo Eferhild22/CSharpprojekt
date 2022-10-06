@@ -7,11 +7,14 @@ public class TurnManager : MonoBehaviour
     private static TurnManager instance;
     [SerializeField] private PlayerTurn playerOne;
     [SerializeField] private PlayerTurn playerTwo;
+    public WeaponRaycast playerOneWeapon { get; set; }
+    public WeaponRaycastEnemy playerTwoWeapon { get; set; }
     [SerializeField] private float timeBetweenTurns;
 
     private int currentPlayerIndex;
     private bool waitingForNextTurn;
     private float turnDelay;
+   
 
     private void Awake()
     {
@@ -57,11 +60,22 @@ public class TurnManager : MonoBehaviour
         if (currentPlayerIndex == 1)
         {
             currentPlayerIndex = 2;
+            if (playerTwoWeapon != null)
+            {
+                playerTwoWeapon.CanShoot = true;
+                playerTwoWeapon.lineRenderer.enabled = false;
+            }
         }
         else if (currentPlayerIndex == 2)
         {
             currentPlayerIndex = 1;
+            if (playerOneWeapon != null)
+            {
+                playerOneWeapon.CanShoot = true;
+                playerOneWeapon.lineRenderer.enabled = false;
+            }
+
         }
-        Debug.Log("The current player is: " + currentPlayerIndex);
+        Debug.LogError("The current player is: " + currentPlayerIndex);
     }
 }

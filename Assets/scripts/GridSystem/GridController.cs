@@ -44,7 +44,7 @@ public class GridController : MonoBehaviour
         {
             return;
         }
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
             if (currentSelectionPosition.y < number - 1)
             {
@@ -52,7 +52,7 @@ public class GridController : MonoBehaviour
                 gridMovement.MoveToPosition(Vector3.up);
             }
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
             if (currentSelectionPosition.y > 0)
             {
@@ -60,7 +60,7 @@ public class GridController : MonoBehaviour
                 gridMovement.MoveToPosition(Vector3.down);
             }
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             if (currentSelectionPosition.x < number - 1)
             {
@@ -68,7 +68,7 @@ public class GridController : MonoBehaviour
                 gridMovement.MoveToPosition(Vector3.left);
             }
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             if (currentSelectionPosition.x > 0)
             {
